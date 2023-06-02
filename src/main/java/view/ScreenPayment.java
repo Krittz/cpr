@@ -11,7 +11,6 @@ import controller.BaseDeDados;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import model.Aluguel;
 import model.Parcela;
 
@@ -82,6 +81,7 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         jLabel10 = new javax.swing.JLabel();
         labelAvisosAluguel = new javax.swing.JLabel();
         btnGerarCodigo = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -219,7 +219,7 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         labelAvisos.setForeground(new java.awt.Color(218, 31, 79));
         labelAvisos.setText(" ");
         labelAvisos.setToolTipText("");
-        jPanel1.add(labelAvisos, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 613, 458, 30));
+        jPanel1.add(labelAvisos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 458, 30));
 
         inputCodigoExcluir.setBackground(new java.awt.Color(18, 20, 31));
         inputCodigoExcluir.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -272,7 +272,7 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnCancelarExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCancelarExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1052, 486, -1, -1));
+        jPanel1.add(btnCancelarExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 490, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Black White and Red Modern Automotive Logo.png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 30, 198, 116));
@@ -449,6 +449,25 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         });
         jPanel1.add(btnGerarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 499, 55, -1));
 
+        btnCancelar.setBackground(new java.awt.Color(9, 13, 25));
+        btnCancelar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(218, 31, 79));
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setBorder(null);
+        btnCancelar.setBorderPainted(false);
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setMaximumSize(new java.awt.Dimension(110, 45));
+        btnCancelar.setMinimumSize(new java.awt.Dimension(110, 45));
+        btnCancelar.setOpaque(true);
+        btnCancelar.setPreferredSize(new java.awt.Dimension(110, 45));
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -484,18 +503,22 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 ArrayList<Parcela> parcelas = new ArrayList<>();
                 parcelas.add(parcela);
                 Pagamento pagamento = new Pagamento(codigoParcela, valor, parcelas, aluguel);
-                pagamentos = controller.getPagamentos();
-                if (pagamentos.contains(pagamento)) {
-                    labelAvisos.setText("pagamento já cadastrado");
 
-                } else {
-                    controller.cadastrar(pagamento);
-                    pagamentos = controller.getPagamentos();
-                    atualizarTabela(pagamentos);
-                    estadoIncial();
-                    clear();
-                    btnExcluir.setEnabled(true);
+                boolean pagamentoExistente = verificarPagamentoExistente(pagamento);
+                if (pagamentoExistente) {
+                    labelAvisos.setText("Pagamento já cadastrado");
+                    btnCancelar.setEnabled(true);
+                    btnCadastrar.setEnabled(false);
+                    return;
+
                 }
+
+                controller.cadastrar(pagamento);
+                pagamentos = controller.getPagamentos();
+                atualizarTabela(pagamentos);
+                estadoIncial();
+                clear();
+                btnExcluir.setEnabled(true);
 
                 break;
 
@@ -526,18 +549,20 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 parcelas1.add(parcela3);
 
                 Pagamento pagamentoParcelado = new Pagamento(codigoParcelado, valorTotal, parcelas1, aluguel);
-                pagamentos = controller.getPagamentos();
-                if (pagamentos.contains(pagamentoParcelado)) {
-                    labelAvisos.setText("Pagamento já cadastrado");
-                } else {
-                    controller.cadastrar(pagamentoParcelado);
 
-                    pagamentos = controller.getPagamentos();
-                    atualizarTabela(pagamentos);
-                    estadoIncial();
-                    clear();
-                    btnExcluir.setEnabled(true);
+                // Verificar se o pagamento já está cadastrado
+                boolean pagamentoParceladoExistente = verificarPagamentoExistente(pagamentoParcelado);
+                if (pagamentoParceladoExistente) {
+                    labelAvisos.setText("Pagamento já cadastrado");
+                    return;
                 }
+
+                controller.cadastrar(pagamentoParcelado);
+                pagamentos = controller.getPagamentos();
+                atualizarTabela(pagamentos);
+                estadoIncial();
+                clear();
+                btnExcluir.setEnabled(true);
 
                 break;
         }
@@ -624,13 +649,31 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
             int codAl = Integer.parseInt(codAluguel);
             int codP = (codAl * 7);
             String codigoPagamento = "#" + String.valueOf(codP);
+
+            // Verificar se o código do pagamento já existe
+            boolean codigoExistente = verificarCodigoExistente(codigoPagamento);
+            if (codigoExistente) {
+                labelAvisos.setText("Código já existente");
+                return;
+            }
+
             inputCodigoPagamento.setText(codigoPagamento);
             btnGerarCodigo.setEnabled(false);
             btnCadastrar.setEnabled(true);
-
         } catch (NumberFormatException ex) {
             labelAvisos.setText("Erro ao gerar código");
         }
+    }
+
+    private boolean verificarCodigoExistente(String codigo) {
+        Iterator<Pagamento> iterator = pagamentos.iterator();
+        while (iterator.hasNext()) {
+            Pagamento p = iterator.next();
+            if (p.getCodigo().equals(codigo)) {
+                return true;
+            }
+        }
+        return false;
     }//GEN-LAST:event_btnGerarCodigoActionPerformed
 
     private void btnGerarFaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarFaturaActionPerformed
@@ -641,6 +684,14 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputParcelas.setEnabled(true);
         btnParcelas.setEnabled(true);
     }//GEN-LAST:event_btnGerarFaturaActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        clear();
+        estadoIncial();
+        if (!controller.listaVazia()) {
+            btnExcluir.setEnabled(true);
+        }
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     public void estadoIncial() {
 
@@ -664,6 +715,8 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
 
         inputCodigoPagamento.setEditable(false);
         btnGerarCodigo.setEnabled(false);
+        btnCancelar.setEnabled(false);
+
     }
 
     public void clear() {
@@ -680,6 +733,17 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         labelAvisos.setText("");
         labelAvisosAluguel.setText("");
         labelAvisosExcluir.setText("");
+    }
+
+    private boolean verificarPagamentoExistente(Pagamento pagamento) {
+        Iterator<Pagamento> iterator = pagamentos.iterator();
+        while (iterator.hasNext()) {
+            Pagamento p = iterator.next();
+            if (p.getCodigo().equals(pagamento.getCodigo())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void atualizarTabela(ArrayList<Pagamento> pagamentos) {
@@ -705,6 +769,7 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelarExcluir;
     private javax.swing.JButton btnConfirmaExcluir;
     private javax.swing.JButton btnConsultarAluguel;
