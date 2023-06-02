@@ -543,7 +543,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
     }
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnEditarActionPerformed
-        String placa = JOptionPane.showInputDialog(this, "Informe o CNPJ da agência");
+        String placa = JOptionPane.showInputDialog(this, "Informe a placa do veiculo");
         if (!placa.isBlank()) {
             btnCadastrar.setEnabled(false);
             btnEditar.setEnabled(false);
