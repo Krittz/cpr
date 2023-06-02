@@ -103,7 +103,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
 
         jPanel1.setBackground(new java.awt.Color(9, 13, 25));
         jPanel1.setPreferredSize(new java.awt.Dimension(1280, 680));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         inputCodigoAluguel.setBackground(new java.awt.Color(18, 20, 31));
         inputCodigoAluguel.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -115,7 +114,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputCodigoAluguel.setPreferredSize(new java.awt.Dimension(260, 50));
         inputCodigoAluguel.setSelectedTextColor(new java.awt.Color(18, 20, 31));
         inputCodigoAluguel.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputCodigoAluguel, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 108, 295, 45));
 
         tabelaAgencias.setBackground(new java.awt.Color(18, 20, 31));
         tabelaAgencias.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -162,21 +160,16 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         tabelaAgencias.setShowGrid(true);
         jScrollPane1.setViewportView(tabelaAgencias);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 160, 594, 304));
-
         jLabel1.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(218, 31, 79));
         jLabel1.setText("PAGAMENTOS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 10, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("CÓDIGO ALUGUEL");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 85, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 542, -1, -1));
 
         btnCadastrar.setBackground(new java.awt.Color(218, 31, 79));
         btnCadastrar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -195,7 +188,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 562, -1, -1));
 
         btnExcluir.setBackground(new java.awt.Color(102, 0, 0));
         btnExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -213,13 +205,11 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 486, -1, -1));
 
         labelAvisos.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         labelAvisos.setForeground(new java.awt.Color(218, 31, 79));
         labelAvisos.setText(" ");
         labelAvisos.setToolTipText("");
-        jPanel1.add(labelAvisos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 458, 30));
 
         inputCodigoExcluir.setBackground(new java.awt.Color(18, 20, 31));
         inputCodigoExcluir.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -229,13 +219,11 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputCodigoExcluir.setPreferredSize(new java.awt.Dimension(260, 50));
         inputCodigoExcluir.setSelectedTextColor(new java.awt.Color(18, 20, 31));
         inputCodigoExcluir.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputCodigoExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(778, 482, 140, -1));
 
         labelAvisosExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         labelAvisosExcluir.setForeground(new java.awt.Color(218, 31, 79));
         labelAvisosExcluir.setText(" ");
         labelAvisosExcluir.setToolTipText("");
-        jPanel1.add(labelAvisosExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 548, 270, 45));
 
         btnConfirmaExcluir.setBackground(new java.awt.Color(9, 13, 25));
         btnConfirmaExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -253,7 +241,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnConfirmaExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConfirmaExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 486, -1, -1));
 
         btnCancelarExcluir.setBackground(new java.awt.Color(9, 13, 25));
         btnCancelarExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -272,10 +259,8 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnCancelarExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCancelarExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 490, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Black White and Red Modern Automotive Logo.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 30, 198, 116));
 
         btnConsultarAluguel.setBackground(new java.awt.Color(218, 31, 79));
         btnConsultarAluguel.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -294,7 +279,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnConsultarAluguelActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultarAluguel, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 109, -1, -1));
 
         inputValorAluguel.setEditable(false);
         inputValorAluguel.setBackground(new java.awt.Color(18, 20, 31));
@@ -305,17 +289,14 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputValorAluguel.setPreferredSize(new java.awt.Dimension(260, 50));
         inputValorAluguel.setSelectedTextColor(new java.awt.Color(18, 20, 31));
         inputValorAluguel.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputValorAluguel, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 195, 122, -1));
 
         jLabel4.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("VALOR");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 172, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("PARCELAS");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 298, 78, -1));
 
         inputParcelas.setBackground(new java.awt.Color(18, 20, 31));
         inputParcelas.setBorder(null);
@@ -333,8 +314,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputParcelas.setSelectionForeground(new java.awt.Color(18, 20, 31));
         jScrollPane3.setViewportView(inputParcelas);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 321, 104, 45));
-
         inputVencimento.setBackground(new java.awt.Color(18, 20, 31));
         inputVencimento.setBorder(null);
         inputVencimento.setForeground(new java.awt.Color(218, 31, 79));
@@ -344,12 +323,10 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputVencimento.setPreferredSize(new java.awt.Dimension(102, 50));
         inputVencimento.setSelectedTextColor(new java.awt.Color(18, 20, 31));
         inputVencimento.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputVencimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 401, 108, 56));
 
         jLabel9.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
         jLabel9.setText("VENCIMENTO");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 378, -1, -1));
 
         inputValorParcela.setEditable(false);
         inputValorParcela.setBackground(new java.awt.Color(18, 20, 31));
@@ -360,12 +337,10 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputValorParcela.setPreferredSize(new java.awt.Dimension(260, 50));
         inputValorParcela.setSelectedTextColor(new java.awt.Color(18, 20, 31));
         inputValorParcela.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputValorParcela, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 401, 154, 56));
 
         jLabel11.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("VALOR DA PARCELA R$");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, 378, -1, -1));
 
         btnGerarFatura.setBackground(new java.awt.Color(218, 31, 79));
         btnGerarFatura.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -384,12 +359,10 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnGerarFaturaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGerarFatura, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 196, -1, 50));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(218, 31, 79));
         jLabel2.setText("DADOS DA FATURA");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 264, -1, -1));
 
         btnParcelas.setBackground(new java.awt.Color(218, 31, 79));
         btnParcelas.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -408,7 +381,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnParcelasActionPerformed(evt);
             }
         });
-        jPanel1.add(btnParcelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 321, 50, -1));
 
         inputCodigoPagamento.setBackground(new java.awt.Color(18, 20, 31));
         inputCodigoPagamento.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -418,17 +390,14 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         inputCodigoPagamento.setPreferredSize(new java.awt.Dimension(260, 50));
         inputCodigoPagamento.setSelectedTextColor(new java.awt.Color(18, 20, 31));
         inputCodigoPagamento.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputCodigoPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 498, -1, 45));
 
         jLabel10.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
         jLabel10.setText("CÓDIGO PAGAMENTO");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 475, -1, -1));
 
         labelAvisosAluguel.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         labelAvisosAluguel.setForeground(new java.awt.Color(218, 31, 79));
         labelAvisosAluguel.setText(" ");
-        jPanel1.add(labelAvisosAluguel, new org.netbeans.lib.awtextra.AbsoluteConstraints(456, 123, -1, -1));
 
         btnGerarCodigo.setBackground(new java.awt.Color(218, 31, 79));
         btnGerarCodigo.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -447,7 +416,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnGerarCodigoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGerarCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 499, 55, -1));
 
         btnCancelar.setBackground(new java.awt.Color(9, 13, 25));
         btnCancelar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -466,7 +434,169 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 btnCancelarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, -1, -1));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(inputCodigoAluguel, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnConsultarAluguel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(labelAvisosAluguel)))
+                        .addGap(375, 375, 375)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(btnParcelas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(37, 37, 37)
+                                .addComponent(jLabel11))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(inputVencimento, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(inputValorParcela, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(inputValorAluguel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6)
+                                        .addComponent(btnGerarFatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel2))))
+                        .addGap(338, 338, 338)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(inputCodigoPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addComponent(btnGerarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(137, 137, 137)
+                        .addComponent(jLabel5)
+                        .addGap(165, 165, 165)
+                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(inputCodigoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(btnConfirmaExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCancelarExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(388, 388, 388)
+                        .addComponent(labelAvisosExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(41, 41, 41))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel3)
+                        .addGap(6, 6, 6)
+                        .addComponent(inputCodigoAluguel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(42, 42, 42)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnConsultarAluguel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(labelAvisosAluguel))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel4)
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(inputValorAluguel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(btnGerarFatura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel8)
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnParcelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel11))
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(inputVencimento, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputValorParcela, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(6, 6, 6)
+                        .addComponent(inputCodigoPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(btnGerarCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(inputCodigoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnConfirmaExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCancelarExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAvisosExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addComponent(labelAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -483,11 +613,22 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelarExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarExcluirActionPerformed
-
+        estadoIncial();
+        clear();
+        if (!controller.listaVazia()) {
+            btnExcluir.setEnabled(true);
+        }
     }//GEN-LAST:event_btnCancelarExcluirActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        estadoIncial();
+        clear();
 
+        inputCodigoExcluir.setVisible(true);
+        inputCodigoExcluir.setText("");
+        btnCancelarExcluir.setVisible(true);
+        btnConfirmaExcluir.setVisible(true);
+        labelAvisosExcluir.setText("Informe o código do pagamento");
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
@@ -503,7 +644,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 parcelas.add(parcela);
                 Pagamento pagamento = new Pagamento(codigoParcela, valor, parcelas, aluguel);
 
-               
                 boolean pagamentoExistente = verificarExistente(pagamento);
                 if (pagamentoExistente) {
                     labelAvisos.setText("Pagamento já cadastrado");
@@ -547,7 +687,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
 
                 Pagamento pagamentoParcelado = new Pagamento(codigoParcelado, valorTotal, parcelas1, aluguel);
 
-                
                 boolean pagamentoParceladoExistente = verificarExistente(pagamentoParcelado);
                 if (pagamentoParceladoExistente) {
                     labelAvisos.setText("Pagamento já cadastrado");
@@ -634,7 +773,34 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnParcelasActionPerformed
 
     private void btnConfirmaExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmaExcluirActionPerformed
-
+        String codigo = inputCodigoExcluir.getText().trim();
+        if (!codigo.isEmpty()) {
+            Pagamento pg = controller.buscarPorCodigo(codigo);
+            if (pg != null) {
+                int confirma = JOptionPane.showConfirmDialog(this, "Confirma exclusão: (" + pg.getCodigo() + ")",
+                        "Confirme a exclusão", JOptionPane.OK_CANCEL_OPTION);
+                if (confirma == JOptionPane.OK_OPTION) {
+                    controller.excluir(pg);
+                    pagamentos = controller.getPagamentos();
+                    atualizarTabela(pagamentos);
+                    estadoIncial();
+                    clear();
+                    if (!controller.listaVazia()) {
+                        btnExcluir.setEnabled(true);
+                    }
+                } else {
+                    estadoIncial();
+                    clear();
+                    if (!controller.listaVazia()) {
+                        btnExcluir.setEnabled(true);
+                    }
+                }
+            } else {
+                labelAvisosExcluir.setText("Informe um código válido");
+            }
+        } else {
+            labelAvisosExcluir.setText("Informe um código válido");
+        }
     }//GEN-LAST:event_btnConfirmaExcluirActionPerformed
 
     private void btnGerarCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarCodigoActionPerformed
@@ -646,7 +812,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
             int codP = (codAl * 7);
             String codigoPagamento = "#" + String.valueOf(codP);
 
-            
             boolean codigoExistente = verificarCodigoExistente(codigoPagamento);
             if (codigoExistente) {
                 labelAvisos.setText("Código já existente");

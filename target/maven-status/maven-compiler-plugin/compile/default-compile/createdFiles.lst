@@ -7,6 +7,7 @@ view\Main$2.class
 view\ScreenLocate.class
 view\ScreenVehicle.class
 view\ScreenAgency$2.class
+view\ScreenPayment$11.class
 view\Main$6.class
 view\ScreenLocate$3.class
 view\ScreenClient$5.class
@@ -60,6 +61,7 @@ view\ScreenClient$2.class
 view\ScreenPayment$1.class
 view\ScreenAgency$6.class
 view\ScreenVehicle$7.class
+view\Main$8.class
 view\ScreenLocate$7.class
 view\ScreenAgency.class
 view\ScreenVehicle$4.class
