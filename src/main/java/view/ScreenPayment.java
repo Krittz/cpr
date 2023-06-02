@@ -491,7 +491,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-
         switch (qtdeParcelas) {
             case 1:
                 int codigo = (aluguel.getCodigo() * 2);
@@ -504,13 +503,12 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 parcelas.add(parcela);
                 Pagamento pagamento = new Pagamento(codigoParcela, valor, parcelas, aluguel);
 
-                boolean pagamentoExistente = verificarPagamentoExistente(pagamento);
+               
+                boolean pagamentoExistente = verificarExistente(pagamento);
                 if (pagamentoExistente) {
                     labelAvisos.setText("Pagamento já cadastrado");
                     btnCancelar.setEnabled(true);
-                    btnCadastrar.setEnabled(false);
                     return;
-
                 }
 
                 controller.cadastrar(pagamento);
@@ -519,7 +517,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 estadoIncial();
                 clear();
                 btnExcluir.setEnabled(true);
-
                 break;
 
             case 3:
@@ -550,8 +547,8 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
 
                 Pagamento pagamentoParcelado = new Pagamento(codigoParcelado, valorTotal, parcelas1, aluguel);
 
-                // Verificar se o pagamento já está cadastrado
-                boolean pagamentoParceladoExistente = verificarPagamentoExistente(pagamentoParcelado);
+                
+                boolean pagamentoParceladoExistente = verificarExistente(pagamentoParcelado);
                 if (pagamentoParceladoExistente) {
                     labelAvisos.setText("Pagamento já cadastrado");
                     return;
@@ -563,7 +560,6 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
                 estadoIncial();
                 clear();
                 btnExcluir.setEnabled(true);
-
                 break;
         }
     }//GEN-LAST:event_btnCadastrarActionPerformed
@@ -650,7 +646,7 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
             int codP = (codAl * 7);
             String codigoPagamento = "#" + String.valueOf(codP);
 
-            // Verificar se o código do pagamento já existe
+            
             boolean codigoExistente = verificarCodigoExistente(codigoPagamento);
             if (codigoExistente) {
                 labelAvisos.setText("Código já existente");
@@ -735,7 +731,7 @@ public final class ScreenPayment extends javax.swing.JInternalFrame {
         labelAvisosExcluir.setText("");
     }
 
-    private boolean verificarPagamentoExistente(Pagamento pagamento) {
+    private boolean verificarExistente(Pagamento pagamento) {
         Iterator<Pagamento> iterator = pagamentos.iterator();
         while (iterator.hasNext()) {
             Pagamento p = iterator.next();
