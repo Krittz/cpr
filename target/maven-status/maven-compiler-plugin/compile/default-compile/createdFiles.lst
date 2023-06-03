@@ -47,7 +47,9 @@ view\ScreenClient$6.class
 view\ScreenPayment$5.class
 view\ScreenLocate$4.class
 view\Main$7.class
+view\ScreenPayment$12.class
 view\ScreenVehicle$8.class
+view\ScreenLocate$11.class
 view\ScreenPayment$9.class
 controller\ClienteController.class
 model\Aluguel.class

@@ -34,7 +34,7 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        painelPrincipal = new javax.swing.JPanel();
         inputCnh = new javax.swing.JTextField();
         inputNome = new javax.swing.JTextField();
         inputEmail = new javax.swing.JTextField();
@@ -55,50 +55,57 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
         labelAvisosExcluir = new javax.swing.JLabel();
         btnConfirmaExcluir = new javax.swing.JButton();
         btnCancelarExcluir = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        wave = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
         setTitle("CLIENTES");
-        setMaximumSize(new java.awt.Dimension(1280, 680));
-        setMinimumSize(new java.awt.Dimension(1280, 680));
-        setPreferredSize(new java.awt.Dimension(1280, 680));
+        setMaximumSize(new java.awt.Dimension(1280, 698));
+        setMinimumSize(new java.awt.Dimension(1280, 698));
+        setPreferredSize(new java.awt.Dimension(1280, 698));
 
-        jPanel1.setBackground(new java.awt.Color(9, 13, 25));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 680));
+        painelPrincipal.setBackground(new java.awt.Color(40, 42, 54));
+        painelPrincipal.setMaximumSize(new java.awt.Dimension(1280, 698));
+        painelPrincipal.setMinimumSize(new java.awt.Dimension(1280, 698));
+        painelPrincipal.setPreferredSize(new java.awt.Dimension(1280, 698));
+        painelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        inputCnh.setBackground(new java.awt.Color(18, 20, 31));
+        inputCnh.setBackground(new java.awt.Color(40, 42, 54));
         inputCnh.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputCnh.setForeground(new java.awt.Color(218, 31, 79));
+        inputCnh.setForeground(new java.awt.Color(189, 147, 249));
         inputCnh.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputCnh.setBorder(null);
+        inputCnh.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputCnh.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputCnh.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputCnh.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputCnh.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputCnh.setSelectionColor(new java.awt.Color(189, 147, 249));
+        painelPrincipal.add(inputCnh, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, -1, -1));
 
-        inputNome.setBackground(new java.awt.Color(18, 20, 31));
+        inputNome.setBackground(new java.awt.Color(40, 42, 54));
         inputNome.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputNome.setForeground(new java.awt.Color(218, 31, 79));
+        inputNome.setForeground(new java.awt.Color(189, 147, 249));
         inputNome.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputNome.setBorder(null);
+        inputNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputNome.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputNome.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputNome.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputNome.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputNome.setSelectionColor(new java.awt.Color(189, 147, 249));
+        painelPrincipal.add(inputNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        inputEmail.setBackground(new java.awt.Color(18, 20, 31));
+        inputEmail.setBackground(new java.awt.Color(40, 42, 54));
         inputEmail.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputEmail.setForeground(new java.awt.Color(218, 31, 79));
+        inputEmail.setForeground(new java.awt.Color(189, 147, 249));
         inputEmail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputEmail.setBorder(null);
+        inputEmail.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputEmail.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputEmail.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputEmail.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputEmail.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputEmail.setSelectionColor(new java.awt.Color(189, 147, 249));
+        painelPrincipal.add(inputEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
 
-        tabelaClientes.setBackground(new java.awt.Color(18, 20, 31));
+        tabelaClientes.setBackground(new java.awt.Color(40, 41, 66));
         tabelaClientes.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        tabelaClientes.setForeground(new java.awt.Color(218, 31, 79));
+        tabelaClientes.setForeground(new java.awt.Color(189, 147, 249));
         tabelaClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -131,37 +138,45 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
         });
         tabelaClientes.setEnabled(false);
         tabelaClientes.setFocusable(false);
-        tabelaClientes.setGridColor(new java.awt.Color(18, 20, 31));
-        tabelaClientes.setPreferredSize(new java.awt.Dimension(300, 300));
+        tabelaClientes.setGridColor(new java.awt.Color(40, 42, 54));
+        tabelaClientes.setPreferredSize(new java.awt.Dimension(300, 240));
+        tabelaClientes.setRowHeight(30);
         tabelaClientes.setRowSelectionAllowed(false);
-        tabelaClientes.setSelectionBackground(new java.awt.Color(218, 31, 79));
-        tabelaClientes.setSelectionForeground(new java.awt.Color(18, 20, 31));
+        tabelaClientes.setSelectionBackground(new java.awt.Color(189, 147, 249));
+        tabelaClientes.setSelectionForeground(new java.awt.Color(40, 41, 66));
         tabelaClientes.setShowGrid(true);
         jScrollPane1.setViewportView(tabelaClientes);
 
+        painelPrincipal.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 600, 270));
+
         jLabel1.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(218, 31, 79));
+        jLabel1.setForeground(new java.awt.Color(189, 147, 249));
         jLabel1.setText("CLIENTES");
+        painelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 43, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setForeground(new java.awt.Color(189, 147, 249));
         jLabel2.setText("NOME");
+        painelPrincipal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setForeground(new java.awt.Color(189, 147, 249));
         jLabel3.setText("CNH");
+        painelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel4.setForeground(new java.awt.Color(189, 147, 249));
         jLabel4.setText("TELEFONE");
+        painelPrincipal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setForeground(new java.awt.Color(189, 147, 249));
         jLabel5.setText("EMAIL");
+        painelPrincipal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
 
-        btnCadastrar.setBackground(new java.awt.Color(218, 31, 79));
+        btnCadastrar.setBackground(new java.awt.Color(189, 147, 249));
         btnCadastrar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnCadastrar.setForeground(new java.awt.Color(9, 13, 25));
+        btnCadastrar.setForeground(new java.awt.Color(40, 42, 54));
         btnCadastrar.setText("CADASTRAR");
         btnCadastrar.setBorder(null);
         btnCadastrar.setBorderPainted(false);
@@ -176,10 +191,11 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
                 btnCadastrarActionPerformed(evt);
             }
         });
+        painelPrincipal.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, -1, -1));
 
-        btnEditar.setBackground(new java.awt.Color(9, 13, 25));
+        btnEditar.setBackground(new java.awt.Color(40, 42, 54));
         btnEditar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(218, 31, 79));
+        btnEditar.setForeground(new java.awt.Color(189, 147, 249));
         btnEditar.setText("EDITAR");
         btnEditar.setBorder(null);
         btnEditar.setBorderPainted(false);
@@ -187,15 +203,15 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
         btnEditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEditar.setMaximumSize(new java.awt.Dimension(110, 45));
         btnEditar.setMinimumSize(new java.awt.Dimension(110, 45));
-        btnEditar.setOpaque(true);
         btnEditar.setPreferredSize(new java.awt.Dimension(110, 45));
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
             }
         });
+        painelPrincipal.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, -1, -1));
 
-        btnExcluir.setBackground(new java.awt.Color(102, 0, 0));
+        btnExcluir.setBackground(new java.awt.Color(184, 0, 0));
         btnExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         btnExcluir.setForeground(new java.awt.Color(18, 20, 31));
         btnExcluir.setText("EXCLUIR");
@@ -211,24 +227,27 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
                 btnExcluirActionPerformed(evt);
             }
         });
+        painelPrincipal.add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, -1, -1));
 
-        inputTelefone.setBackground(new java.awt.Color(18, 20, 31));
+        inputTelefone.setBackground(new java.awt.Color(40, 42, 54));
         inputTelefone.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputTelefone.setForeground(new java.awt.Color(218, 31, 79));
+        inputTelefone.setForeground(new java.awt.Color(189, 147, 249));
         inputTelefone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputTelefone.setBorder(null);
+        inputTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputTelefone.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputTelefone.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputTelefone.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputTelefone.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputTelefone.setSelectionColor(new java.awt.Color(189, 147, 249));
+        painelPrincipal.add(inputTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
 
         labelAvisos.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        labelAvisos.setForeground(new java.awt.Color(218, 31, 79));
+        labelAvisos.setForeground(new java.awt.Color(189, 147, 249));
         labelAvisos.setText(" ");
         labelAvisos.setToolTipText("");
+        painelPrincipal.add(labelAvisos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 316, 45));
 
-        btnSalvar.setBackground(new java.awt.Color(9, 13, 25));
+        btnSalvar.setBackground(new java.awt.Color(40, 42, 54));
         btnSalvar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnSalvar.setForeground(new java.awt.Color(218, 31, 79));
+        btnSalvar.setForeground(new java.awt.Color(189, 147, 249));
         btnSalvar.setText("SALVAR");
         btnSalvar.setBorder(null);
         btnSalvar.setBorderPainted(false);
@@ -243,24 +262,27 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
                 btnSalvarActionPerformed(evt);
             }
         });
+        painelPrincipal.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, -1, -1));
 
-        inputCnhExcluir.setBackground(new java.awt.Color(18, 20, 31));
+        inputCnhExcluir.setBackground(new java.awt.Color(40, 42, 54));
         inputCnhExcluir.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputCnhExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        inputCnhExcluir.setForeground(new java.awt.Color(189, 147, 249));
         inputCnhExcluir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputCnhExcluir.setBorder(null);
+        inputCnhExcluir.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputCnhExcluir.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputCnhExcluir.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputCnhExcluir.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputCnhExcluir.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputCnhExcluir.setSelectionColor(new java.awt.Color(189, 147, 249));
+        painelPrincipal.add(inputCnhExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 140, 40));
 
         labelAvisosExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        labelAvisosExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        labelAvisosExcluir.setForeground(new java.awt.Color(189, 147, 249));
         labelAvisosExcluir.setText(" ");
         labelAvisosExcluir.setToolTipText("");
+        painelPrincipal.add(labelAvisosExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 530, 260, 45));
 
-        btnConfirmaExcluir.setBackground(new java.awt.Color(9, 13, 25));
+        btnConfirmaExcluir.setBackground(new java.awt.Color(40, 42, 54));
         btnConfirmaExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnConfirmaExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        btnConfirmaExcluir.setForeground(new java.awt.Color(189, 147, 249));
         btnConfirmaExcluir.setText("CONFIRMAR");
         btnConfirmaExcluir.setBorder(null);
         btnConfirmaExcluir.setBorderPainted(false);
@@ -274,10 +296,11 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
                 btnConfirmaExcluirActionPerformed(evt);
             }
         });
+        painelPrincipal.add(btnConfirmaExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 480, -1, -1));
 
-        btnCancelarExcluir.setBackground(new java.awt.Color(9, 13, 25));
+        btnCancelarExcluir.setBackground(new java.awt.Color(40, 42, 54));
         btnCancelarExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnCancelarExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        btnCancelarExcluir.setForeground(new java.awt.Color(189, 147, 249));
         btnCancelarExcluir.setText("CANCELAR");
         btnCancelarExcluir.setBorder(null);
         btnCancelarExcluir.setBorderPainted(false);
@@ -285,127 +308,26 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
         btnCancelarExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCancelarExcluir.setMaximumSize(new java.awt.Dimension(110, 45));
         btnCancelarExcluir.setMinimumSize(new java.awt.Dimension(110, 45));
-        btnCancelarExcluir.setOpaque(true);
         btnCancelarExcluir.setPreferredSize(new java.awt.Dimension(110, 45));
         btnCancelarExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarExcluirActionPerformed(evt);
             }
         });
+        painelPrincipal.add(btnCancelarExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 530, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Black White and Red Modern Automotive Logo.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(labelAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(inputNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel5))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(inputCnh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(inputTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelAvisosExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(inputCnhExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnConfirmaExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnCancelarExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(17, 17, 17))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(447, 447, 447)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(labelAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(inputCnhExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnConfirmaExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnCancelarExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(inputCnh, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inputNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(inputTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)))
-                .addComponent(labelAvisosExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(121, Short.MAX_VALUE))
-        );
+        wave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fotor_2023-6-3_11_58_13.png"))); // NOI18N
+        painelPrincipal.add(wave, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(painelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(painelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -640,11 +562,11 @@ public final class ScreenClient extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelAvisos;
     private javax.swing.JLabel labelAvisosExcluir;
+    private javax.swing.JPanel painelPrincipal;
     private javax.swing.JTable tabelaClientes;
+    private javax.swing.JLabel wave;
     // End of variables declaration//GEN-END:variables
 }

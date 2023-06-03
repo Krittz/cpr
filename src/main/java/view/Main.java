@@ -32,7 +32,7 @@ public final class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
-        exibirMenu(false);
+        liberarMenu(false);
         baseDeDados = new BaseDeDados();
         screenClient = new ScreenClient(baseDeDados);
         screenVehicle = new ScreenVehicle(baseDeDados);
@@ -43,8 +43,13 @@ public final class Main extends javax.swing.JFrame {
 
     }
 
-    public void exibirMenu(boolean valor) {
-        menuBar.setVisible(valor);
+    public void liberarMenu(boolean valor) {
+        menuBar.setEnabled(valor);
+        menuClientes.setEnabled(valor);
+        menuVeiculos.setEnabled(valor);
+        menuAgencias.setEnabled(valor);
+        menuAlugueis.setEnabled(valor);
+        menuPagamentos.setEnabled(valor);
 
     }
 
@@ -61,7 +66,6 @@ public final class Main extends javax.swing.JFrame {
         desktop = new javax.swing.JDesktopPane();
         painelInicial = new javax.swing.JPanel();
         labelUserName = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         inputUsuario = new javax.swing.JTextField();
         inputSenha = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
@@ -94,47 +98,49 @@ public final class Main extends javax.swing.JFrame {
 
         desktop.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        painelInicial.setBackground(new java.awt.Color(18, 20, 31));
+        painelInicial.setBackground(new java.awt.Color(40, 42, 54));
         painelInicial.setMaximumSize(new java.awt.Dimension(1280, 720));
         painelInicial.setMinimumSize(new java.awt.Dimension(1280, 720));
         painelInicial.setPreferredSize(new java.awt.Dimension(1280, 720));
 
-        labelUserName.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
-        labelUserName.setForeground(new java.awt.Color(218, 31, 79));
+        labelUserName.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        labelUserName.setForeground(new java.awt.Color(189, 147, 249));
+        labelUserName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelUserName.setText(" ");
+        labelUserName.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         labelUserName.setPreferredSize(new java.awt.Dimension(100, 35));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/svg.png"))); // NOI18N
-
-        inputUsuario.setBackground(new java.awt.Color(9, 13, 25));
+        inputUsuario.setBackground(new java.awt.Color(40, 42, 54));
         inputUsuario.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputUsuario.setForeground(new java.awt.Color(218, 31, 79));
+        inputUsuario.setForeground(new java.awt.Color(189, 147, 249));
         inputUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputUsuario.setBorder(null);
+        inputUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputUsuario.setPreferredSize(new java.awt.Dimension(220, 50));
-        inputUsuario.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputUsuario.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputUsuario.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputUsuario.setSelectionColor(new java.awt.Color(189, 147, 249));
 
-        inputSenha.setBackground(new java.awt.Color(9, 13, 25));
+        inputSenha.setBackground(new java.awt.Color(40, 42, 54));
         inputSenha.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputSenha.setForeground(new java.awt.Color(218, 31, 79));
+        inputSenha.setForeground(new java.awt.Color(189, 147, 249));
         inputSenha.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputSenha.setBorder(null);
+        inputSenha.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputSenha.setPreferredSize(new java.awt.Dimension(220, 50));
-        inputSenha.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputSenha.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputSenha.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputSenha.setSelectionColor(new java.awt.Color(189, 147, 249));
 
-        jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/user-fill.png"))); // NOI18N
         jLabel2.setText("Usuário");
 
-        jLabel4.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/keyhole-fill.png"))); // NOI18N
         jLabel4.setText("Senha");
 
-        btnEntrar.setBackground(new java.awt.Color(218, 30, 78));
+        btnEntrar.setBackground(new java.awt.Color(189, 147, 249));
         btnEntrar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnEntrar.setForeground(new java.awt.Color(9, 13, 25));
+        btnEntrar.setForeground(new java.awt.Color(40, 42, 54));
         btnEntrar.setText("ENTRAR");
         btnEntrar.setBorder(null);
         btnEntrar.setBorderPainted(false);
@@ -150,12 +156,12 @@ public final class Main extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setForeground(new java.awt.Color(189, 147, 249));
         jLabel5.setText("Não possui conta?");
 
-        btnCadastrar.setBackground(new java.awt.Color(9, 13, 25));
+        btnCadastrar.setBackground(new java.awt.Color(40, 42, 54));
         btnCadastrar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnCadastrar.setForeground(new java.awt.Color(218, 31, 79));
+        btnCadastrar.setForeground(new java.awt.Color(189, 147, 249));
         btnCadastrar.setText("CADASTRE-SE");
         btnCadastrar.setBorder(null);
         btnCadastrar.setBorderPainted(false);
@@ -170,15 +176,16 @@ public final class Main extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Black White and Red Modern Automotive Logo.png"))); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/logo.png"))); // NOI18N
 
         labelAvisos.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
-        labelAvisos.setForeground(new java.awt.Color(218, 31, 79));
+        labelAvisos.setForeground(new java.awt.Color(189, 147, 249));
         labelAvisos.setText(" ");
 
-        btnSair.setBackground(new java.awt.Color(218, 30, 78));
+        btnSair.setBackground(new java.awt.Color(40, 42, 54));
         btnSair.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnSair.setForeground(new java.awt.Color(9, 13, 25));
+        btnSair.setForeground(new java.awt.Color(189, 147, 249));
         btnSair.setText("SAIR");
         btnSair.setBorder(null);
         btnSair.setBorderPainted(false);
@@ -194,7 +201,7 @@ public final class Main extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(218, 31, 79));
+        jLabel8.setForeground(new java.awt.Color(189, 147, 249));
         jLabel8.setText("LOGIN");
 
         javax.swing.GroupLayout painelInicialLayout = new javax.swing.GroupLayout(painelInicial);
@@ -202,76 +209,72 @@ public final class Main extends javax.swing.JFrame {
         painelInicialLayout.setHorizontalGroup(
             painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelInicialLayout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(1200, 1200, 1200)
+                .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelInicialLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(painelInicialLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(364, 364, 364)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(309, 309, 309)
                 .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelInicialLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
                         .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(painelInicialLayout.createSequentialGroup()
-                        .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel2)
-                            .addComponent(inputSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(inputUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(painelInicialLayout.createSequentialGroup()
                                 .addGap(36, 36, 36)
-                                .addComponent(jLabel8)))
-                        .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelInicialLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(labelAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelInicialLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26))))))
+                                .addComponent(jLabel8))
+                            .addComponent(jLabel2)
+                            .addComponent(inputUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(157, 157, 157))
+                    .addComponent(jLabel4)
+                    .addComponent(inputSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelInicialLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(labelAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelInicialLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelInicialLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel5))
+                    .addGroup(painelInicialLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         painelInicialLayout.setVerticalGroup(
             painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelInicialLayout.createSequentialGroup()
                 .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelInicialLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(painelInicialLayout.createSequentialGroup()
-                                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14)
-                                .addComponent(labelUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(painelInicialLayout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2)))
-                        .addGap(301, 301, 301))
+                        .addGap(10, 10, 10)
+                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(labelUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelInicialLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(126, 126, 126)
+                        .addComponent(jLabel8)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel2)
+                        .addGap(6, 6, 6)
                         .addComponent(inputUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(15, 15, 15)
                         .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(painelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(inputSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelAvisos))
-                        .addGap(18, 18, 18)
+                        .addGap(6, 6, 6)
+                        .addComponent(inputSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(labelAvisos)
+                        .addGap(20, 20, 20)
                         .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                        .addGap(25, 25, 25)
                         .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(15, 15, 15)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(147, 147, 147))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelInicialLayout.createSequentialGroup()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
         );
 
         desktop.setLayer(painelInicial, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -287,14 +290,16 @@ public final class Main extends javax.swing.JFrame {
             .addComponent(painelInicial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        menuBar.setBackground(new java.awt.Color(18, 20, 31));
-        menuBar.setBorder(null);
-        menuBar.setOpaque(true);
-        menuBar.setPreferredSize(new java.awt.Dimension(72, 40));
+        menuBar.setBackground(new java.awt.Color(4, 59, 82));
+        menuBar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
+        menuBar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        menuBar.setMaximumSize(new java.awt.Dimension(1280, 22));
+        menuBar.setMinimumSize(new java.awt.Dimension(1280, 22));
+        menuBar.setPreferredSize(new java.awt.Dimension(1280, 30));
 
-        menuClientes.setBackground(new java.awt.Color(18, 20, 31));
+        menuClientes.setBackground(new java.awt.Color(40, 42, 54));
         menuClientes.setBorder(null);
-        menuClientes.setForeground(new java.awt.Color(102, 102, 102));
+        menuClientes.setForeground(new java.awt.Color(189, 147, 249));
         menuClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/users-three.png"))); // NOI18N
         menuClientes.setText("CLIENTES");
         menuClientes.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
@@ -302,7 +307,8 @@ public final class Main extends javax.swing.JFrame {
         menuClientes.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         menuClientes.setMargin(new java.awt.Insets(0, 11, 3, 11));
         menuClientes.setMinimumSize(new java.awt.Dimension(255, 16));
-        menuClientes.setPreferredSize(new java.awt.Dimension(255, 16));
+        menuClientes.setOpaque(true);
+        menuClientes.setPreferredSize(new java.awt.Dimension(255, 20));
         menuClientes.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/users-three.png"))); // NOI18N
 
         linkClientes.setText("ACESSAR MENU");
@@ -315,15 +321,16 @@ public final class Main extends javax.swing.JFrame {
 
         menuBar.add(menuClientes);
 
-        menuVeiculos.setBackground(new java.awt.Color(18, 20, 31));
+        menuVeiculos.setBackground(new java.awt.Color(40, 42, 54));
         menuVeiculos.setBorder(null);
-        menuVeiculos.setForeground(new java.awt.Color(102, 102, 102));
+        menuVeiculos.setForeground(new java.awt.Color(189, 147, 249));
         menuVeiculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/motorcycle.png"))); // NOI18N
         menuVeiculos.setText("VEÍCULOS");
-        menuVeiculos.setFont(new java.awt.Font("Raleway Black", 0, 12)); // NOI18N
+        menuVeiculos.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
         menuVeiculos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         menuVeiculos.setMinimumSize(new java.awt.Dimension(250, 16));
-        menuVeiculos.setPreferredSize(new java.awt.Dimension(255, 22));
+        menuVeiculos.setOpaque(true);
+        menuVeiculos.setPreferredSize(new java.awt.Dimension(255, 20));
 
         linkVeiculos.setText("ACESSAR MENU");
         linkVeiculos.addActionListener(new java.awt.event.ActionListener() {
@@ -335,14 +342,16 @@ public final class Main extends javax.swing.JFrame {
 
         menuBar.add(menuVeiculos);
 
-        menuAgencias.setBackground(new java.awt.Color(18, 20, 31));
+        menuAgencias.setBackground(new java.awt.Color(40, 42, 54));
         menuAgencias.setBorder(null);
-        menuAgencias.setForeground(new java.awt.Color(102, 102, 102));
+        menuAgencias.setForeground(new java.awt.Color(189, 147, 249));
         menuAgencias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bank.png"))); // NOI18N
         menuAgencias.setText("AGÊNCIAS");
         menuAgencias.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
         menuAgencias.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuAgencias.setPreferredSize(new java.awt.Dimension(255, 22));
+        menuAgencias.setMinimumSize(new java.awt.Dimension(255, 20));
+        menuAgencias.setOpaque(true);
+        menuAgencias.setPreferredSize(new java.awt.Dimension(300, 20));
 
         linkAgencias.setText("ACESSAR MENU");
         linkAgencias.addActionListener(new java.awt.event.ActionListener() {
@@ -354,14 +363,15 @@ public final class Main extends javax.swing.JFrame {
 
         menuBar.add(menuAgencias);
 
-        menuAlugueis.setBackground(new java.awt.Color(18, 20, 31));
+        menuAlugueis.setBackground(new java.awt.Color(40, 42, 54));
         menuAlugueis.setBorder(null);
-        menuAlugueis.setForeground(new java.awt.Color(102, 102, 102));
+        menuAlugueis.setForeground(new java.awt.Color(189, 147, 249));
         menuAlugueis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/tag.png"))); // NOI18N
         menuAlugueis.setText("ALUGUÉIS");
         menuAlugueis.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
         menuAlugueis.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuAlugueis.setPreferredSize(new java.awt.Dimension(255, 22));
+        menuAlugueis.setOpaque(true);
+        menuAlugueis.setPreferredSize(new java.awt.Dimension(255, 20));
 
         linkAlugeis.setText("ACESSAR MENU");
         linkAlugeis.addActionListener(new java.awt.event.ActionListener() {
@@ -373,14 +383,16 @@ public final class Main extends javax.swing.JFrame {
 
         menuBar.add(menuAlugueis);
 
-        menuPagamentos.setBackground(new java.awt.Color(18, 20, 31));
+        menuPagamentos.setBackground(new java.awt.Color(40, 42, 54));
         menuPagamentos.setBorder(null);
-        menuPagamentos.setForeground(new java.awt.Color(102, 102, 102));
+        menuPagamentos.setForeground(new java.awt.Color(189, 147, 249));
         menuPagamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hand-coins.png"))); // NOI18N
         menuPagamentos.setText("PAGAMENTOS");
         menuPagamentos.setFont(new java.awt.Font("Roboto Black", 0, 12)); // NOI18N
         menuPagamentos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuPagamentos.setPreferredSize(new java.awt.Dimension(259, 22));
+        menuPagamentos.setMinimumSize(new java.awt.Dimension(255, 20));
+        menuPagamentos.setOpaque(true);
+        menuPagamentos.setPreferredSize(new java.awt.Dimension(255, 20));
 
         linkPagamentos.setText("ACESSAR MENU");
         linkPagamentos.addActionListener(new java.awt.event.ActionListener() {
@@ -404,7 +416,7 @@ public final class Main extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
+            .addComponent(desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
         );
 
         pack();
@@ -417,7 +429,7 @@ public final class Main extends javax.swing.JFrame {
         User user = loadUser(username);
         if (user != null && user.authenticate(password)) {
             JOptionPane.showMessageDialog(this, "Bem vindo " + user.getUsername() + "!", "Acesso permitido", JOptionPane.INFORMATION_MESSAGE);
-            exibirMenu(true);
+            liberarMenu(true);
             inputUsuario.setText("");
             inputUsuario.setEditable(false);
             inputSenha.setText("");
@@ -466,9 +478,10 @@ public final class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_linkPagamentosActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        liberarMenu(false);
         btnSair.setEnabled(false);
         labelUserName.setText("");
-        menuBar.setVisible(false);
+
         inputUsuario.setEditable(true);
         inputUsuario.requestFocus();
 
@@ -547,7 +560,6 @@ public final class Main extends javax.swing.JFrame {
     private javax.swing.JPasswordField inputSenha;
     private javax.swing.JTextField inputUsuario;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

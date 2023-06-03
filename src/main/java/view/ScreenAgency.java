@@ -54,57 +54,59 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
         labelAvisosExcluir = new javax.swing.JLabel();
         btnConfirmaExcluir = new javax.swing.JButton();
         btnCancelarExcluir = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         inputHoraFechamento = new javax.swing.JFormattedTextField();
         inputHoraAbertura = new javax.swing.JFormattedTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        wave = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
         setTitle("AGÊNCIAS");
-        setMaximumSize(new java.awt.Dimension(1280, 680));
-        setMinimumSize(new java.awt.Dimension(1280, 680));
-        setPreferredSize(new java.awt.Dimension(1280, 680));
+        setMaximumSize(new java.awt.Dimension(1280, 698));
+        setMinimumSize(new java.awt.Dimension(1280, 698));
+        setPreferredSize(new java.awt.Dimension(1280, 698));
 
-        jPanel1.setBackground(new java.awt.Color(9, 13, 25));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 680));
+        jPanel1.setBackground(new java.awt.Color(40, 42, 54));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1280, 698));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1280, 698));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 698));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        inputNome.setBackground(new java.awt.Color(18, 20, 31));
+        inputNome.setBackground(new java.awt.Color(40, 42, 54));
         inputNome.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputNome.setForeground(new java.awt.Color(218, 31, 79));
+        inputNome.setForeground(new java.awt.Color(189, 147, 249));
         inputNome.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputNome.setBorder(null);
+        inputNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputNome.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputNome.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputNome.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputNome.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputNome.setSelectionColor(new java.awt.Color(189, 147, 249));
         jPanel1.add(inputNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 185, -1, -1));
 
-        inputCodigo.setBackground(new java.awt.Color(18, 20, 31));
+        inputCodigo.setBackground(new java.awt.Color(40, 42, 54));
         inputCodigo.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputCodigo.setForeground(new java.awt.Color(218, 31, 79));
+        inputCodigo.setForeground(new java.awt.Color(189, 147, 249));
         inputCodigo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputCodigo.setBorder(null);
+        inputCodigo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputCodigo.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputCodigo.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputCodigo.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputCodigo.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputCodigo.setSelectionColor(new java.awt.Color(189, 147, 249));
         jPanel1.add(inputCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 106, -1, -1));
 
-        inputEndereco.setBackground(new java.awt.Color(18, 20, 31));
+        inputEndereco.setBackground(new java.awt.Color(40, 42, 54));
         inputEndereco.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputEndereco.setForeground(new java.awt.Color(218, 31, 79));
+        inputEndereco.setForeground(new java.awt.Color(189, 147, 249));
         inputEndereco.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputEndereco.setBorder(null);
+        inputEndereco.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputEndereco.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputEndereco.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputEndereco.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputEndereco.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputEndereco.setSelectionColor(new java.awt.Color(189, 147, 249));
         jPanel1.add(inputEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 362, 262, -1));
 
-        tabelaAgencias.setBackground(new java.awt.Color(18, 20, 31));
+        tabelaAgencias.setBackground(new java.awt.Color(40, 41, 66));
         tabelaAgencias.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        tabelaAgencias.setForeground(new java.awt.Color(218, 31, 79));
+        tabelaAgencias.setForeground(new java.awt.Color(189, 147, 249));
         tabelaAgencias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -139,43 +141,43 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
         });
         tabelaAgencias.setEnabled(false);
         tabelaAgencias.setFocusable(false);
-        tabelaAgencias.setGridColor(new java.awt.Color(18, 20, 31));
+        tabelaAgencias.setGridColor(new java.awt.Color(40, 42, 54));
         tabelaAgencias.setPreferredSize(new java.awt.Dimension(300, 300));
         tabelaAgencias.setRowSelectionAllowed(false);
-        tabelaAgencias.setSelectionBackground(new java.awt.Color(218, 31, 79));
-        tabelaAgencias.setSelectionForeground(new java.awt.Color(18, 20, 31));
+        tabelaAgencias.setSelectionBackground(new java.awt.Color(189, 147, 249));
+        tabelaAgencias.setSelectionForeground(new java.awt.Color(40, 41, 66));
         tabelaAgencias.setShowGrid(true);
         jScrollPane1.setViewportView(tabelaAgencias);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 162, 690, 304));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 690, 304));
 
         jLabel1.setFont(new java.awt.Font("Roboto Black", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(218, 31, 79));
+        jLabel1.setForeground(new java.awt.Color(189, 147, 249));
         jLabel1.setText("AGÊNCIAS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(447, 43, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("CÓDIGO");
+        jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel2.setText("Código");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 83, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel3.setText("NOME");
+        jLabel3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel3.setText("Nome");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 162, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("TELEFONE");
+        jLabel4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel4.setText("Telefone");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 247, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 362, -1, -1));
 
-        btnCadastrar.setBackground(new java.awt.Color(218, 31, 79));
+        btnCadastrar.setBackground(new java.awt.Color(189, 147, 249));
         btnCadastrar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnCadastrar.setForeground(new java.awt.Color(9, 13, 25));
+        btnCadastrar.setForeground(new java.awt.Color(40, 42, 54));
         btnCadastrar.setText("CADASTRAR");
         btnCadastrar.setBorder(null);
         btnCadastrar.setBorderPainted(false);
@@ -190,11 +192,11 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 515, -1, -1));
+        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 570, -1, -1));
 
-        btnEditar.setBackground(new java.awt.Color(9, 13, 25));
+        btnEditar.setBackground(new java.awt.Color(40, 42, 54));
         btnEditar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnEditar.setForeground(new java.awt.Color(218, 31, 79));
+        btnEditar.setForeground(new java.awt.Color(189, 147, 249));
         btnEditar.setText("EDITAR");
         btnEditar.setBorder(null);
         btnEditar.setBorderPainted(false);
@@ -209,9 +211,9 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 515, -1, -1));
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 570, -1, -1));
 
-        btnExcluir.setBackground(new java.awt.Color(102, 0, 0));
+        btnExcluir.setBackground(new java.awt.Color(184, 0, 0));
         btnExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
         btnExcluir.setForeground(new java.awt.Color(18, 20, 31));
         btnExcluir.setText("EXCLUIR");
@@ -227,27 +229,27 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
                 btnExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 480, -1, -1));
+        jPanel1.add(btnExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 500, -1, -1));
 
-        inputTelefone.setBackground(new java.awt.Color(18, 20, 31));
+        inputTelefone.setBackground(new java.awt.Color(40, 42, 54));
         inputTelefone.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputTelefone.setForeground(new java.awt.Color(218, 31, 79));
+        inputTelefone.setForeground(new java.awt.Color(189, 147, 249));
         inputTelefone.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputTelefone.setBorder(null);
+        inputTelefone.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputTelefone.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputTelefone.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputTelefone.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputTelefone.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputTelefone.setSelectionColor(new java.awt.Color(189, 147, 249));
         jPanel1.add(inputTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 276, -1, -1));
 
         labelAvisos.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        labelAvisos.setForeground(new java.awt.Color(218, 31, 79));
+        labelAvisos.setForeground(new java.awt.Color(189, 147, 249));
         labelAvisos.setText(" ");
         labelAvisos.setToolTipText("");
-        jPanel1.add(labelAvisos, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 572, 316, 45));
+        jPanel1.add(labelAvisos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 316, 45));
 
-        btnSalvar.setBackground(new java.awt.Color(9, 13, 25));
+        btnSalvar.setBackground(new java.awt.Color(40, 42, 54));
         btnSalvar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnSalvar.setForeground(new java.awt.Color(218, 31, 79));
+        btnSalvar.setForeground(new java.awt.Color(189, 147, 249));
         btnSalvar.setText("SALVAR");
         btnSalvar.setBorder(null);
         btnSalvar.setBorderPainted(false);
@@ -256,28 +258,29 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
         btnSalvar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSalvar.setMaximumSize(new java.awt.Dimension(110, 45));
         btnSalvar.setMinimumSize(new java.awt.Dimension(110, 45));
+        btnSalvar.setOpaque(true);
         btnSalvar.setPreferredSize(new java.awt.Dimension(110, 45));
-        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 515, -1, -1));
+        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, -1, -1));
 
-        inputCodigoExcluir.setBackground(new java.awt.Color(18, 20, 31));
+        inputCodigoExcluir.setBackground(new java.awt.Color(40, 42, 54));
         inputCodigoExcluir.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        inputCodigoExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        inputCodigoExcluir.setForeground(new java.awt.Color(189, 147, 249));
         inputCodigoExcluir.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        inputCodigoExcluir.setBorder(null);
+        inputCodigoExcluir.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
         inputCodigoExcluir.setPreferredSize(new java.awt.Dimension(260, 50));
-        inputCodigoExcluir.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputCodigoExcluir.setSelectionColor(new java.awt.Color(218, 31, 79));
-        jPanel1.add(inputCodigoExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 140, -1));
+        inputCodigoExcluir.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputCodigoExcluir.setSelectionColor(new java.awt.Color(189, 147, 249));
+        jPanel1.add(inputCodigoExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 500, 140, 40));
 
         labelAvisosExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        labelAvisosExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        labelAvisosExcluir.setForeground(new java.awt.Color(189, 147, 249));
         labelAvisosExcluir.setText(" ");
         labelAvisosExcluir.setToolTipText("");
-        jPanel1.add(labelAvisosExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 540, 270, 45));
+        jPanel1.add(labelAvisosExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 550, 250, 45));
 
-        btnConfirmaExcluir.setBackground(new java.awt.Color(9, 13, 25));
+        btnConfirmaExcluir.setBackground(new java.awt.Color(40, 42, 54));
         btnConfirmaExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnConfirmaExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        btnConfirmaExcluir.setForeground(new java.awt.Color(189, 147, 249));
         btnConfirmaExcluir.setText("CONFIRMAR");
         btnConfirmaExcluir.setBorder(null);
         btnConfirmaExcluir.setBorderPainted(false);
@@ -285,17 +288,18 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
         btnConfirmaExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnConfirmaExcluir.setMaximumSize(new java.awt.Dimension(110, 45));
         btnConfirmaExcluir.setMinimumSize(new java.awt.Dimension(110, 45));
+        btnConfirmaExcluir.setOpaque(true);
         btnConfirmaExcluir.setPreferredSize(new java.awt.Dimension(110, 45));
         btnConfirmaExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConfirmaExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConfirmaExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, -1, -1));
+        jPanel1.add(btnConfirmaExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 500, -1, -1));
 
-        btnCancelarExcluir.setBackground(new java.awt.Color(9, 13, 25));
+        btnCancelarExcluir.setBackground(new java.awt.Color(40, 42, 54));
         btnCancelarExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnCancelarExcluir.setForeground(new java.awt.Color(218, 31, 79));
+        btnCancelarExcluir.setForeground(new java.awt.Color(189, 147, 249));
         btnCancelarExcluir.setText("CANCELAR");
         btnCancelarExcluir.setBorder(null);
         btnCancelarExcluir.setBorderPainted(false);
@@ -310,30 +314,27 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
                 btnCancelarExcluirActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCancelarExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, -1, -1));
+        jPanel1.add(btnCancelarExcluir, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 550, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Black White and Red Modern Automotive Logo.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 20, 198, 116));
-
-        jLabel7.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("ENDEREÇO");
+        jLabel7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel7.setText("Endereço");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 338, -1, -1));
 
-        inputHoraFechamento.setBackground(new java.awt.Color(18, 20, 31));
-        inputHoraFechamento.setBorder(null);
-        inputHoraFechamento.setForeground(new java.awt.Color(218, 31, 79));
+        inputHoraFechamento.setBackground(new java.awt.Color(40, 42, 54));
+        inputHoraFechamento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
+        inputHoraFechamento.setForeground(new java.awt.Color(189, 147, 249));
         inputHoraFechamento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
         inputHoraFechamento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         inputHoraFechamento.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
         inputHoraFechamento.setPreferredSize(new java.awt.Dimension(130, 50));
-        inputHoraFechamento.setSelectedTextColor(new java.awt.Color(18, 20, 31));
-        inputHoraFechamento.setSelectionColor(new java.awt.Color(218, 31, 79));
+        inputHoraFechamento.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputHoraFechamento.setSelectionColor(new java.awt.Color(189, 147, 249));
         jPanel1.add(inputHoraFechamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 447, 139, -1));
 
-        inputHoraAbertura.setBackground(new java.awt.Color(18, 20, 31));
-        inputHoraAbertura.setBorder(null);
-        inputHoraAbertura.setForeground(new java.awt.Color(218, 31, 79));
+        inputHoraAbertura.setBackground(new java.awt.Color(40, 42, 54));
+        inputHoraAbertura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
+        inputHoraAbertura.setForeground(new java.awt.Color(189, 147, 249));
         inputHoraAbertura.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
         inputHoraAbertura.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         inputHoraAbertura.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -342,15 +343,18 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
         inputHoraAbertura.setSelectionColor(new java.awt.Color(218, 31, 79));
         jPanel1.add(inputHoraAbertura, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 447, 123, -1));
 
-        jLabel8.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("ABRE ÀS(xx:xx)");
+        jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel8.setText("Abre às (xx:xx)");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 424, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("FECHA ÀS(xx:xx)");
+        jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(189, 147, 249));
+        jLabel9.setText("Fecha às (xx:xx)");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 424, -1, -1));
+
+        wave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fotor_2023-6-3_11_58_13.png"))); // NOI18N
+        jPanel1.add(wave, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -360,7 +364,7 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -600,7 +604,6 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -609,5 +612,6 @@ public final class ScreenAgency extends javax.swing.JInternalFrame {
     private javax.swing.JLabel labelAvisos;
     private javax.swing.JLabel labelAvisosExcluir;
     private javax.swing.JTable tabelaAgencias;
+    private javax.swing.JLabel wave;
     // End of variables declaration//GEN-END:variables
 }
