@@ -60,6 +60,10 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
         btnDisponivelFalse = new javax.swing.JCheckBox();
         inputAno = new javax.swing.JFormattedTextField();
         wave = new javax.swing.JLabel();
+        btnCancelar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        inputCodigoEditar = new javax.swing.JTextField();
+        labelAvisosEditar = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
@@ -185,7 +189,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
                 btnCadastrarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 543, -1, -1));
+        jPanel1.add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, -1, -1));
 
         btnEditar.setBackground(new java.awt.Color(40, 42, 54));
         btnEditar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -204,7 +208,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 543, -1, -1));
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 530, -1, -1));
 
         btnExcluir.setBackground(new java.awt.Color(184, 0, 0));
         btnExcluir.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -273,12 +277,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
         btnSalvar.setMinimumSize(new java.awt.Dimension(110, 45));
         btnSalvar.setOpaque(true);
         btnSalvar.setPreferredSize(new java.awt.Dimension(110, 45));
-        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalvarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(286, 543, -1, -1));
+        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 580, -1, -1));
 
         inputPlacaExcluir.setBackground(new java.awt.Color(40, 42, 54));
         inputPlacaExcluir.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -384,6 +383,49 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
         wave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fotor_2023-6-3_11_58_13.png"))); // NOI18N
         jPanel1.add(wave, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, -1, -1));
 
+        btnCancelar.setBackground(new java.awt.Color(40, 42, 54));
+        btnCancelar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(189, 147, 249));
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setBorder(null);
+        btnCancelar.setBorderPainted(false);
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setMaximumSize(new java.awt.Dimension(110, 45));
+        btnCancelar.setMinimumSize(new java.awt.Dimension(110, 45));
+        btnCancelar.setPreferredSize(new java.awt.Dimension(110, 45));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, -1, -1));
+
+        btnBuscar.setBackground(new java.awt.Color(189, 147, 249));
+        btnBuscar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(40, 42, 54));
+        btnBuscar.setText("BUSCAR");
+        btnBuscar.setBorder(null);
+        btnBuscar.setBorderPainted(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscar.setFocusPainted(false);
+        btnBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnBuscar.setMaximumSize(new java.awt.Dimension(50, 50));
+        btnBuscar.setMinimumSize(new java.awt.Dimension(50, 50));
+        btnBuscar.setPreferredSize(new java.awt.Dimension(50, 50));
+        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, 140, 40));
+
+        inputCodigoEditar.setBackground(new java.awt.Color(40, 42, 54));
+        inputCodigoEditar.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        inputCodigoEditar.setForeground(new java.awt.Color(189, 147, 249));
+        inputCodigoEditar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        inputCodigoEditar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
+        inputCodigoEditar.setPreferredSize(new java.awt.Dimension(260, 50));
+        inputCodigoEditar.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputCodigoEditar.setSelectionColor(new java.awt.Color(189, 147, 249));
+        jPanel1.add(inputCodigoEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 530, 140, 40));
+
+        labelAvisosEditar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        labelAvisosEditar.setForeground(new java.awt.Color(189, 147, 249));
+        labelAvisosEditar.setText(" ");
+        labelAvisosEditar.setToolTipText("");
+        jPanel1.add(labelAvisosEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 530, 260, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -395,7 +437,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -657,7 +699,9 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCadastrar;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelarExcluir;
     private javax.swing.JButton btnConfirmaExcluir;
     private javax.swing.JCheckBox btnDisponivelFalse;
@@ -667,6 +711,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
     private javax.swing.ButtonGroup btnGroup;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JFormattedTextField inputAno;
+    private javax.swing.JTextField inputCodigoEditar;
     private javax.swing.JTextField inputDiaria;
     private javax.swing.JTextField inputMarca;
     private javax.swing.JTextField inputModelo;
@@ -682,6 +727,7 @@ public class ScreenVehicle extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelAvisos;
+    private javax.swing.JLabel labelAvisosEditar;
     private javax.swing.JLabel labelAvisosExcluir;
     private javax.swing.JTable tabelaVeiculos;
     private javax.swing.JLabel wave;

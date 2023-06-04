@@ -11,7 +11,7 @@ import model.Cliente;
 public class ClienteController {
 
     private final ArrayList<Cliente> clientes;
-    private int proximoCodigo = 1;
+    private int proximoCodigo = 01;
 
     public ClienteController(ArrayList<Cliente> clientes) {
         this.clientes = clientes;

@@ -38,7 +38,7 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
         agencia = new Agencia();
         alugueis = new ArrayList<Aluguel>();
         controller = new AluguelController(alugueis);
-        estadoIncial();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -76,6 +76,10 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
         inputAgencia = new javax.swing.JTextField();
         btnConsultarAgencia = new javax.swing.JButton();
         wave = new javax.swing.JLabel();
+        btnCancelar = new javax.swing.JButton();
+        inputCodigoEditar = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
+        labelAvisosEditar = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
@@ -414,7 +418,12 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
         btnSalvar.setMinimumSize(new java.awt.Dimension(110, 45));
         btnSalvar.setOpaque(true);
         btnSalvar.setPreferredSize(new java.awt.Dimension(110, 40));
-        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 528, -1, -1));
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 580, -1, -1));
 
         btnEditar.setBackground(new java.awt.Color(40, 42, 54));
         btnEditar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -433,7 +442,7 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 528, -1, -1));
+        jPanel1.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, -1, -1));
 
         inputAgencia.setBackground(new java.awt.Color(40, 42, 54));
         inputAgencia.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -469,6 +478,59 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
         wave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/fotor_2023-6-3_11_58_13.png"))); // NOI18N
         jPanel1.add(wave, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, -1, -1));
 
+        btnCancelar.setBackground(new java.awt.Color(40, 42, 54));
+        btnCancelar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(189, 147, 249));
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setBorder(null);
+        btnCancelar.setBorderPainted(false);
+        btnCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCancelar.setMaximumSize(new java.awt.Dimension(110, 45));
+        btnCancelar.setMinimumSize(new java.awt.Dimension(110, 45));
+        btnCancelar.setPreferredSize(new java.awt.Dimension(110, 45));
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, 40));
+
+        inputCodigoEditar.setBackground(new java.awt.Color(40, 42, 54));
+        inputCodigoEditar.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        inputCodigoEditar.setForeground(new java.awt.Color(189, 147, 249));
+        inputCodigoEditar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        inputCodigoEditar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(189, 147, 249), 1, true));
+        inputCodigoEditar.setPreferredSize(new java.awt.Dimension(260, 50));
+        inputCodigoEditar.setSelectedTextColor(new java.awt.Color(40, 42, 54));
+        inputCodigoEditar.setSelectionColor(new java.awt.Color(189, 147, 249));
+        jPanel1.add(inputCodigoEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, 140, 40));
+
+        btnBuscar.setBackground(new java.awt.Color(189, 147, 249));
+        btnBuscar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(40, 42, 54));
+        btnBuscar.setText("BUSCAR");
+        btnBuscar.setBorder(null);
+        btnBuscar.setBorderPainted(false);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscar.setFocusPainted(false);
+        btnBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnBuscar.setMaximumSize(new java.awt.Dimension(50, 50));
+        btnBuscar.setMinimumSize(new java.awt.Dimension(50, 50));
+        btnBuscar.setPreferredSize(new java.awt.Dimension(50, 50));
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 580, 140, 40));
+
+        labelAvisosEditar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        labelAvisosEditar.setForeground(new java.awt.Color(189, 147, 249));
+        labelAvisosEditar.setText(" ");
+        labelAvisosEditar.setToolTipText("");
+        jPanel1.add(labelAvisosEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 530, 260, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -484,371 +546,64 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConsultarPlacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarPlacaActionPerformed
-        String placa = inputPlaca.getText().trim();
-        boolean placaEncontrada = false;
 
-        if (!placa.isEmpty()) {
-            List<Veiculo> veiculos = baseDeDados.getVeiculos();
-            if (veiculos.isEmpty()) {
-                labelAvisos.setText("Nenhum veiculo cadastrado");
-            } else {
-                try {
-                    Iterator<Veiculo> iterator = veiculos.iterator();
-
-                    while (iterator.hasNext() && !placaEncontrada) {
-                        Veiculo v = iterator.next();
-                        if (v.getPlaca().equals(placa)) {
-                            if (v.isDisponivel() == false) {
-                                labelAvisos.setText("Veículo: " + v.getPlaca() + " está indisponível");
-                                inputDataRetirada.setEditable(false);
-                                inputDataDevolucao.setEditable(false);
-                                btnCalcularTotal.setEnabled(false);
-
-                            } else {
-                                labelAvisos.setText("Veiculo: " + v.getMarca() + "-" + v.getModelo());
-                                veiculo = v;
-                                inputDataRetirada.setEditable(true);
-                                inputDataRetirada.requestFocus();
-                                inputDataDevolucao.setEditable(true);
-                                btnCalcularTotal.setEnabled(true);
-                            }
-                            placaEncontrada = true;
-                            break;
-                        }
-                    }
-
-                    if (!placaEncontrada) {
-                        labelAvisos.setText("Veículo não encontrado");
-                        estadoIncial();
-                    }
-                } catch (Exception e) {
-                    JOptionPane.showMessageDialog(this, "Erro ao consultar placa do veículo: " + e.getMessage(),
-                            "Erro", JOptionPane.ERROR_MESSAGE);
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            if (!controller.listaVazia()) {
-                estadoIncial();
-                btnEditar.setEnabled(true);
-                btnExcluir.setEnabled(true);
-
-            }
-            labelAvisos.setText("Placa inválida");
-        }
     }//GEN-LAST:event_btnConsultarPlacaActionPerformed
 
     private void btnCalcularTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularTotalActionPerformed
-        try {
-            String dataRetirada = inputDataRetirada.getText().trim();
-            String dataDevolucao = inputDataDevolucao.getText().trim();
-            double diaria = veiculo.getDiaria();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            retirada = LocalDate.parse(dataRetirada, formatter);
-            devolucao = LocalDate.parse(dataDevolucao, formatter);
-            long diasAlugados = ChronoUnit.DAYS.between(retirada, devolucao);
-            total = diaria * diasAlugados;
-            inputValorTotal.setText(String.valueOf(total));
-            inputAgencia.setEditable(true);
-            btnConsultarAgencia.setEnabled(true);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Erro ao calcular valor total: " + e.getMessage(),
-                    "Erro", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
-        }
 
 
     }//GEN-LAST:event_btnCalcularTotalActionPerformed
 
     private void btnConsultarCnhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarCnhActionPerformed
-        String cnh = inputCnh.getText().trim();
-        boolean cnhEncontrada = false;
 
-        try {
-            if (!cnh.isEmpty()) {
-                List<Cliente> clientes = baseDeDados.getClientes();
-
-                if (clientes.isEmpty()) {
-                    labelAvisos.setText("Nenhum cliente cadastrado");
-                } else {
-                    Iterator<Cliente> iterator = clientes.iterator();
-
-                    while (iterator.hasNext() && !cnhEncontrada) {
-                        Cliente c = iterator.next();
-                        if (c.getCnh().equals(cnh)) {
-                            labelAvisos.setText("Cliente: " + c.getNome());
-                            cliente = c;
-                            btnCadastrar.setEnabled(true);
-                            cnhEncontrada = true;
-                        }
-                    }
-
-                    if (!cnhEncontrada) {
-                        labelAvisos.setText("Cliente não encontrado");
-                        btnCadastrar.setEnabled(false);
-                    }
-                }
-            } else {
-                labelAvisos.setText("CNH inválida");
-            }
-        } catch (NullPointerException e) {
-            labelAvisos.setText("Erro: Valor nulo encontrado");
-        } catch (NoSuchElementException e) {
-            labelAvisos.setText("Erro: Elemento não encontrado");
-        } catch (Exception e) {
-            labelAvisos.setText("Erro: Ocorreu uma exceção não esperada");
-        }
     }//GEN-LAST:event_btnConsultarCnhActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        String codigo = JOptionPane.showInputDialog(this, "Informe o código do aluguel:");
-        if (!codigo.isBlank()) {
-            int cod = Integer.parseInt(codigo);
-            Aluguel a = controller.buscarPorCodigo(cod);
-            Veiculo v = a.getVeiculo();
-            Agencia ag = a.getAgencia();
-            Cliente c = a.getCliente();
 
-            habilitarCampos(false);
-            btnConsultarPlaca.setEnabled(false);
-            inputPlaca.setText(v.getPlaca());
-
-            inputDataRetirada.setText(String.valueOf(a.getDataRetirada()));
-            inputDataRetirada.setEditable(true);
-
-            inputDataDevolucao.setText(String.valueOf(a.getDataDevolucao()));
-            inputDataDevolucao.setEditable(true);
-
-            inputValorTotal.setText(String.valueOf(a.getValorTotal()));
-            btnCalcularTotal.setEnabled(true);
-
-            inputAgencia.setText(ag.getNome());
-            btnConsultarAgencia.setEnabled(false);
-            inputCnh.setText(c.getCnh());
-            btnConsultarCnh.setEnabled(false);
-            btnCalcularTotal.addActionListener((ActionEvent evt1) -> {
-                btnSalvar.setVisible(true);
-                btnSalvar.addActionListener((ActionEvent evt2) -> {
-                    String dataRetirada = inputDataRetirada.getText().trim();
-                    String dataDevolucao = inputDataDevolucao.getText().trim();
-                    String valorTotal = inputValorTotal.getText().trim();
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                    retirada = LocalDate.parse(dataRetirada, formatter);
-                    devolucao = LocalDate.parse(dataDevolucao, formatter);
-                    total = Double.parseDouble(valorTotal);
-                    controller.editar(cod, retirada, devolucao, cliente, veiculo, agencia, total);
-                    alugueis = controller.getAlugueis();
-                    atualizarTabela(alugueis);
-                    baseDeDados.atualizarAlugueis(alugueis);
-                    clear();
-                    estadoIncial();
-                    if (!controller.listaVazia()) {
-                        btnEditar.setEnabled(true);
-                        btnExcluir.setEnabled(true);
-                    }
-                });
-            });
-
-        } else {
-            JOptionPane.showMessageDialog(this, "Informe um valor válido", "Valor inválido",
-                    JOptionPane.INFORMATION_MESSAGE);
-        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnConsultarAgenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarAgenciaActionPerformed
-        String codigo = inputAgencia.getText().trim();
-        boolean agenciaEncontrada = false;
-        if (!codigo.isEmpty()) {
-            List<Agencia> agencias = baseDeDados.getAgencias();
-            if (agencias.isEmpty()) {
-                labelAvisos.setText("Nenhuma agência cadastrada");
-            } else {
 
-                Iterator<Agencia> iterator = agencias.iterator();
-                while (iterator.hasNext()) {
-                    Agencia a = iterator.next();
-                    if (a.getCodigo().equals(codigo)) {
-                        labelAvisos.setText("Agência: " + a.getNome());
-                        agencia = a;
-                        btnConsultarCnh.setEnabled(true);
-                        inputCnh.setEditable(true);
-                        agenciaEncontrada = true;
-                    }
-                }
-                if (!agenciaEncontrada) {
-                    labelAvisos.setText("Agência não encontrada");
-                    btnConsultarCnh.setEnabled(false);
-                    inputCnh.setEditable(false);
-                }
-            }
-        } else {
-            labelAvisos.setText("Código invalido");
-        }
     }//GEN-LAST:event_btnConsultarAgenciaActionPerformed
 
     private void inputPlacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputPlacaActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_inputPlacaActionPerformed
 
-    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {
-        controller.cadastrar(retirada, devolucao, veiculo, agencia, cliente, total);
-        alugueis = controller.getAlugueis();
-        atualizarTabela(alugueis);
-        baseDeDados.atualizarAlugueis(alugueis);
-        clear();
-        posCadastro();
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
 
-    }
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
-    public void posCadastro() {
-        estadoIncial();
-        if (!controller.listaVazia()) {
-            btnEditar.setEnabled(true);
-            btnExcluir.setEnabled(true);
-        }
-    }
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
 
-    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {
-        habilitarCampos(false);
-        btnExcluir.setEnabled(false);
-        btnEditar.setEnabled(false);
-        inputCodigoExcluir.setVisible(true);
-        btnCancelarExcluir.setVisible(true);
-        btnConfirmaExcluir.setVisible(true);
-        labelAvisosExcluir.setText("Informe o código do aluguel");
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
-    }
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+       
+    }//GEN-LAST:event_btnCadastrarActionPerformed
 
-    private void btnConfirmaExcluirActionPerformed(java.awt.event.ActionEvent evt) {
-        String codigo = inputCodigoExcluir.getText().trim();
-        if (!codigo.isEmpty()) {
-            int cod = Integer.parseInt(codigo);
-            Aluguel a = controller.buscarPorCodigo(cod);
-            if (a != null) {
-                labelAvisosExcluir.setText("");
-                int confirma = JOptionPane.showConfirmDialog(this, "Confirma exclusão: (" + a.getCodigo() + ")",
-                        "Confirme a exclusão", JOptionPane.OK_CANCEL_OPTION);
-                if (confirma == JOptionPane.OK_OPTION) {
-                    controller.excluir(a);
-                    alugueis = controller.getAlugueis();
-                    atualizarTabela(alugueis);
-                    btnConfirmaExcluir.setVisible(false);
-                    inputCodigoExcluir.setVisible(false);
-                    btnCancelarExcluir.setVisible(false);
-                    habilitarCampos(true);
-                    baseDeDados.atualizarAlugueis(alugueis);
-                    if (!controller.listaVazia()) {
-                        btnExcluir.setEnabled(true);
-                        btnEditar.setEnabled(true);
-                    } else {
-                        estadoIncial();
-                    }
-                } else {
-                    if (!controller.listaVazia()) {
-                        estadoIncial();
-                        btnConsultarPlaca.setEnabled(true);
-                        inputPlaca.setEditable(true);
-                        btnExcluir.setEnabled(true);
-                        btnEditar.setEnabled(true);
-                    } else {
-                        estadoIncial();
-                    }
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
-                }
-            } else {
-                labelAvisosExcluir.setText("Aluguel não encontrado");
-            }
-        } else {
-            labelAvisosExcluir.setText("Informe um valor válido");
-            inputCodigoExcluir.setText("");
-        }
-    }
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
-    private void btnCancelarExcluirActionPerformed(java.awt.event.ActionEvent evt) {
-        if (!controller.listaVazia()) {
-            estadoIncial();
+    private void btnConfirmaExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmaExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConfirmaExcluirActionPerformed
 
-            btnEditar.setEnabled(true);
-            btnExcluir.setEnabled(true);
-            clear();
-        } else {
-            estadoIncial();
-        }
+    private void btnCancelarExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarExcluirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelarExcluirActionPerformed
 
-    }
-
-    public void estadoIncial() {
-        clear();
-        inputCnh.setEditable(false);
-        btnConsultarCnh.setEnabled(false);
-        inputDataDevolucao.setEditable(false);
-        inputDataRetirada.setEditable(false);
-        inputValorTotal.setEditable(false);
-        btnCalcularTotal.setEnabled(false);
-        btnCadastrar.setEnabled(false);
-        btnSalvar.setVisible(false);
-        btnEditar.setEnabled(false);
-        btnExcluir.setEnabled(false);
-        inputCodigoExcluir.setVisible(false);
-        btnConfirmaExcluir.setVisible(false);
-        btnCancelarExcluir.setVisible(false);
-        inputAgencia.setEditable(false);
-        btnConsultarAgencia.setEnabled(false);
-        habilitarCampos(true);
-    }
-
-    public void habilitarCampos(boolean op) {
-        inputPlaca.setEditable(op);
-        btnConsultarPlaca.setEnabled(op);
-
-    }
-
-    public void clear() {
-        inputPlaca.setText("");
-        inputCnh.setText("");
-        inputDataDevolucao.setText("");
-        inputDataRetirada.setText("");
-        inputAgencia.setText("");
-        inputCnh.setText("");
-        inputValorTotal.setText("");
-        labelAvisos.setText("");
-        labelAvisosExcluir.setText("");
-
-    }
-
-    public void atualizarTabela(ArrayList<Aluguel> alugueis) {
-        DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("CÓDIGO");
-        model.addColumn("RETIRADA");
-        model.addColumn("DEVOLUÇÃO");
-        model.addColumn("TOTAL R$");
-        model.addColumn("VEÍCULO");
-        model.addColumn("CLIENTE");
-        model.addColumn("AGÊNCIA");
-
-        Iterator<Aluguel> it = alugueis.iterator();
-        while (it.hasNext()) {
-            Aluguel a = it.next();
-            Veiculo v = a.getVeiculo();
-            Cliente c = a.getCliente();
-            Agencia ag = a.getAgencia();
-            Object[] linha = {
-                a.getCodigo(),
-                a.getDataRetirada(),
-                a.getDataDevolucao(),
-                a.getValorTotal(),
-                v.getPlaca(),
-                c.getCnh(),
-                ag.getNome()
-            };
-            model.addRow(linha);
-        }
-        tabelaAlugueis.setModel(model);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnCalcularTotal;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelarExcluir;
     private javax.swing.JButton btnConfirmaExcluir;
     private javax.swing.JButton btnConsultarAgencia;
@@ -859,6 +614,7 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JTextField inputAgencia;
     private javax.swing.JTextField inputCnh;
+    private javax.swing.JTextField inputCodigoEditar;
     private javax.swing.JTextField inputCodigoExcluir;
     private javax.swing.JFormattedTextField inputDataDevolucao;
     private javax.swing.JFormattedTextField inputDataRetirada;
@@ -874,6 +630,7 @@ public final class ScreenLocate extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelAvisos;
+    private javax.swing.JLabel labelAvisosEditar;
     private javax.swing.JLabel labelAvisosExcluir;
     private javax.swing.JTable tabelaAlugueis;
     private javax.swing.JLabel wave;
