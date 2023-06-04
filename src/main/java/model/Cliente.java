@@ -8,6 +8,8 @@ import java.util.Objects;
  */
 public class Cliente {
 
+    private int codigo;
+
     private String nome;
     private String cnh;
     private String email;
@@ -17,11 +19,20 @@ public class Cliente {
 
     }
 
-    public Cliente(String nome, String cnh, String email, String telefone) {
+    public Cliente(int codigo, String nome, String cnh, String email, String telefone) {
+        this.codigo = codigo;
         this.nome = nome;
         this.cnh = cnh;
         this.email = email;
         this.telefone = telefone;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNome() {
@@ -85,5 +96,5 @@ public class Cliente {
         }
         return Objects.equals(this.telefone, other.telefone);
     }
-    
+
 }

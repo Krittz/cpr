@@ -11,13 +11,21 @@ import model.Cliente;
 public class ClienteController {
 
     private final ArrayList<Cliente> clientes;
+    private int proximoCodigo = 1;
 
     public ClienteController(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
     }
 
-    public void cadastrar(Cliente cliente) {
+    public void cadastrar(String nome, String cnh, String email, String telefone) {
+        Cliente cliente = new Cliente();
+        cliente.setCodigo(proximoCodigo);
+        cliente.setNome(nome);
+        cliente.setCnh(cnh);
+        cliente.setEmail(email);
+        cliente.setTelefone(telefone);
         clientes.add(cliente);
+        proximoCodigo++;
     }
 
     public void excluir(Cliente cliente) {
@@ -39,12 +47,24 @@ public class ClienteController {
         return null;
     }
 
-    public void editar(String nome, String cnh, String email, String telefone) {
+    public Cliente buscarPorCodigo(int codigo) {
         Iterator<Cliente> it = clientes.iterator();
         while (it.hasNext()) {
             Cliente c = it.next();
-            if (c.getCnh().equals(cnh)) {
+            if (c.getCodigo() == codigo) {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public void editar(int codigo, String nome, String cnh, String email, String telefone) {
+        Iterator<Cliente> it = clientes.iterator();
+        while (it.hasNext()) {
+            Cliente c = it.next();
+            if (c.getCodigo() == codigo) {
                 c.setNome(nome);
+                c.setCnh(cnh);
                 c.setEmail(email);
                 c.setTelefone(telefone);
             }
@@ -58,5 +78,5 @@ public class ClienteController {
             return false;
         }
     }
-    
+
 }
